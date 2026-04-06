@@ -1,45 +1,19 @@
-const OPEN_WEATHER_KEY = "e55196ae1c281c46da567618a7c61d93";
-const OPEN_WEATHER_URL = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid=${OPEN_WEATHER_KEY}`;
+let button=document.querySelector('.Lupa');
+let inputvalue=document.querySelector('.Searchbar');
+let nameValue=document.querySelector('.name');
+let temp=document.querySelector('.temp');
+let desc=document.querySelector('.desc');
 
-fetch(OPEN_WEATHER_URL)
-  .then(response => response.json())
-  .then(data => console.log(data));
+button.addEventListener('click', function(){
 
-  data.main.temp
-data.weather[0].description 
+    fetch(`https://api.openweathermap.org/data/3.0/weather?q=${inputvalue.value}&units=metric&appid=25f0a42a0ec1b04a2665dd81d403a6f5`)
+    .then(response => response.json())
+    .then(
+        displayData
+    )
+})
 
-const getWeather=(cityName)=>{
-    const fetchWeather=fetch(
-        `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid=${OPEN_WEATHER_KEY}`+
-        cityName+
-        `&appid=${OPEN_WEATHER_KEY}`+
-        `e55196ae1c281c46da567618a7c61d93`+
-        `&units=imperial`
-
-    );
-
-    fetchWeather
-    .then(function(resp){
-        return resp.json();
-    })
-    .then(function(data){
-        displayWeather(data);
-    })
-    .catch(function(){
-
-    });
-}
-
-
-const displayWeather=(data)=>{
-let fahrenheit = Math.round(data.main.temp);
-    let description = data.weather[0].description;
-   
-    document.getElementById("description").innerHTML=description;
-    document.getElementById("temp").innerHTML=fahrenheit+'&deg;';
-    document.getElementById("location").innerHTML=data.name;
-}
-
-window.onload=function() {
-getWeather(' Minsk ');
+const displayData=(weather)=>{
+   temp.innerText=`${weather.main.temp}°C`;
+   desc.innerText=`${weather.weather[0].main}`;
 }
