@@ -1,5 +1,5 @@
 const OPEN_WEATHER_KEY = "e55196ae1c281c46da567618a7c61d93";
-const OPEN_WEATHER_URL = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid=${OPEN_WEATHER_KEY}`;
+const OPEN_WEATHER_URL = `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid=${OPEN_WEATHER_KEY}`;
 
 fetch(OPEN_WEATHER_URL)
   .then(response => response.json())
@@ -10,7 +10,7 @@ data.weather[0].description
 
 const getWeather=(cityName)=>{
     const fetchWeather=fetch(
-        `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid=${OPEN_WEATHER_KEY}`+
+        `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid=${OPEN_WEATHER_KEY}`+
         cityName+
         `&appid=${OPEN_WEATHER_KEY}`+
         `e55196ae1c281c46da567618a7c61d93`+
