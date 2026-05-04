@@ -17,26 +17,36 @@
         <div class="Logo"><img src="../images/logo.png" height="71px" alt="logo"></div>
         
         <div class="Search"> 
-            <input type="search" placeholder="Enter location" oninput="liveSearch()" class="Searchbar">
+            <input type="search" placeholder="Enter location" id="searchbox" oninput="liveSearch()" class="Searchbar">
             <button class="Lupa"><img src="../images/Lupa.png" alt="Lupa"/></button>
         </div>
 
-        <div class="date">Date</div>
 
-        <div class="daymode">Cloudy</div>
+
+        <div class="date" id="current-date">    </div>
+
 
         
 
-        <div class="motivation">The future looks <b>bright</b>-stay tuned!</div>
+
+
+        <button class="daymode" data-translate="t1" id="language-switcher">English</button>
+        
+
+        
+
+        <div class="motivation" data-translate="t2">The future looks <b>bright</b>-stay tuned!</div>
 </header>
 
 
 <div class="greeting">
     <div class="greetingtext">
-    <h2>Welocme to SeifSkies</h2>
-    At SeifSkies, we believe weather shouldn't just be data, it should be clear, beautiful, and useful.
+  <div class="WtSS" data-translate="t3"><h2>Welocme to SeifSkies</h2></div>
+<p data-translate="t4">
+    At SeifSkies, we believe weather should not just be data, it should be clear, beautiful, and useful.
     This app was created to help you stay prepared for your day with accurate forecasts, stunning visuals, and smart features that make checking the weather feel less like a chore and more like a glance at the sky.
-    Whether you're planning a trip, dressing for the day, or just curious about the clouds above
+    Whether you are planning a trip, dressing for the day, or just curious about the clouds above
+</p>
 </div>
 <img src="../images/logo2.png" alt="logo2" class="logo2" />
 </div>
@@ -44,30 +54,30 @@
 
 
 
-    <h2>Major Cities Weather</h2>
+   <div class="MCW" data-translate="t5"><h2>Major Cities Weather</h2></div>
 
     <div class="cities_wrapper">
         <div class="card_forecast">
-            <p class="card_forecast_title">Cairo</p>
+            <p class="card_forecast_title">Minsk</p>
             <img src="../images/sunny.png" alt="sunny" class="logo2" />
         <p class="temp">----°C</p>
         <p class="desc">----</p>
 
         </div>
         <div class="card_forecast">
-            <p class="card_forecast_title">London</p>
+            <p class="card_forecast_title">Moscow</p>
             <img src="../images/cloudy.png" alt="cloudy" class="logo2" />
             <p class="temp">----°C</p>
             <p class="desc">----</p>
         </div>
         <div class="card_forecast">
-            <p  class="card_forecast_title">Sydney</p>
+            <p  class="card_forecast_title">Kiyev</p>
             <img src="../images/windy.png" alt="windy" class="logo2" />
             <p class="temp">----°C</p>
             <p class="desc">----</p>
         </div>
         <div class="card_forecast">
-            <p  class="card_forecast_title">Tokyo</p>
+            <p  class="card_forecast_title">Warsaw</p>
             <img src="../images/rainy.png" alt="rainy" class="logo2" />
             <p class="temp">----°C</p>
             <p class="desc">----</p>
@@ -79,7 +89,7 @@
 
 
     <footer>
-        <script src="../scripts/marinaweather.js"></script>
+        <script src="../scripts/weather.js"></script>
     </footer>
 
 
