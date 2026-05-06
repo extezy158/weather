@@ -1,6 +1,4 @@
-// Получаем текущую дату
 const date = new Date();
-// Форматируем дату (например, в локальном формате)
 document.getElementById("current-date").textContent = date.toLocaleDateString();
 
 const OPEN_WEATHER_KEY = "e55196ae1c281c46da567618a7c61d93";
@@ -137,3 +135,24 @@ function getTranslation(element, language) {
 
   return translations[language][translationKey];
 }
+
+const Card = document.getElementById('card');
+Card.addEventListener('click', () => {
+    window.location.href = '../townpage/townweather.html';
+});
+
+const Card2 = document.getElementById('card2');
+Card2.addEventListener('click', () => {
+    window.location.href = '../townpage/townweather.html';
+});
+
+const Card3 = document.getElementById('card3');
+Card3.addEventListener('click', () => {
+    window.location.href = '../townpage/townweather.html';
+});
+
+const Card4 = document.getElementById('card4');
+Card4.addEventListener('click', () => {
+    window.location.href = '../townpage/townweather.html';
+});
+
