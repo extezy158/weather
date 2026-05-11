@@ -138,6 +138,7 @@ function getTranslation(element, language) {
 
 const Card = document.getElementById('card');
 Card.addEventListener('click', () => {
+  
     window.location.href = '../townpage/townweather.html';
 });
 
