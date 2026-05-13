@@ -4,7 +4,7 @@ document.getElementById("current-date").textContent = date.toLocaleDateString();
 const OPEN_WEATHER_KEY = "e55196ae1c281c46da567618a7c61d93";
 
 const getWeather = (cityName, card) => {
-  const furl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${OPEN_WEATHER_KEY}&units=metric&lang=ru`;
+
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${OPEN_WEATHER_KEY}&units=metric&lang=ru`;
 
   fetch(url)
