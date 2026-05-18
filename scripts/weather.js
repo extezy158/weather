@@ -138,22 +138,36 @@ function getTranslation(element, language) {
 
 const Card = document.getElementById('card');
 Card.addEventListener('click', () => {
-  
+  const forecastTitle = document.getElementById('tittle1');
+  const titleValue = forecastTitle.textContent;
+ 
+  localStorage.setItem('cityTitleValue', titleValue);
+ 
+
+  window.titleValue = titleValue;
     window.location.href = '../townpage/townweather.html';
 });
 
 const Card2 = document.getElementById('card2');
 Card2.addEventListener('click', () => {
+  const forecastTitle = document.getElementById('tittle2');
+  const titleValue = forecastTitle.textContent;
+  window.titleValue = titleValue;
     window.location.href = '../townpage/townweather.html';
 });
 
 const Card3 = document.getElementById('card3');
 Card3.addEventListener('click', () => {
+  const forecastTitle = document.getElementById('tittle3');
+  const titleValue = forecastTitle.textContent;
+  window.titleValue = titleValue;
     window.location.href = '../townpage/townweather.html';
 });
 
 const Card4 = document.getElementById('card4');
 Card4.addEventListener('click', () => {
+  const forecastTitle = document.getElementById('tittle4');
+  const titleValue = forecastTitle.textContent;
+  window.titleValue = titleValue;
     window.location.href = '../townpage/townweather.html';
 });
-

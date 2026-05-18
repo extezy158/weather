@@ -1,12 +1,21 @@
+
+  const cardForecastTitle = document.getElementById('towntittle');
+  const titleValue = window.titleValue;
+  cardForecastTitle.textContent = titleValue;
+
 const date = new Date();
 document.getElementById("current-date").textContent = date.toLocaleDateString();
 
 const OPEN_WEATHER_KEY = "e55196ae1c281c46da567618a7c61d93";
 
+const cityName = document.querySelector(".card_forecast_title");
+
+
 const getWeather = (cityName, card) => {
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${OPEN_WEATHER_KEY}&units=metric&lang=ru`;
 
+  cityName.textContent = localStorage.getItem('cityTitleValue').trim();
   fetch(url)
     .then((resp) => resp.json())
     .then((data) => {
@@ -51,12 +60,19 @@ if (img === "Clouds") {
   card.querySelector(".logo2").src = icon;
 };
 
+
 const loadCitiesWeather = () => {
   const cards = document.querySelectorAll(".card_forecast");
 
   cards.forEach((card) => {
     const cityName = card.querySelector(".card_forecast_title").innerText.trim();
-    getWeather(cityName, card);
+
+    getWeather(cityName, card); 
+
+    if (typeof getForecast === "function") {
+      getForecast(cityName);
+    }
   });
 };
+
 loadCitiesWeather();
